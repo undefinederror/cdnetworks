@@ -1,5 +1,4 @@
 # cdnetworks 
-[![NPM](https://nodei.co/npm/cdnetworks.png?mini=true)](https://nodei.co/npm/cdnetworks/)
 
 A simple Node.js wrapper for the <a href="http://www.cdnetworks.com/" target="_blank" >CDNetworks</a> Cache Flush Open API v2.4.0
 
