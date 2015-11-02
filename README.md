@@ -14,7 +14,7 @@ A simple Node.js wrapper for the <a href="http://www.cdnetworks.com/" target="_b
   - [padList](#padlist)
   - [doPurge](#dopurge)
   - [status](#status)
-- [Example](#example-usage)
+- [Example usage](#example-usage)
 - [Service area](#service-area)
 - [Additional notes](#additional-notes)
 
@@ -100,8 +100,8 @@ cdn.padList()
 ##### response
 ```js
 [
- “image.foocdn.com”,
- “adv.foocdn.com”
+ 'image.foocdn.com',
+ 'adv.foocdn.com'
 ]
 
 ```
@@ -157,14 +157,14 @@ cdn.setValues({ type: 'wildcard' }).doPurge({
 ##### response
 ```js
 {
- “resultCode”:200,
- “pid”: 13459,
- “details”: “success (2 items)”,
- “paths”:[
-    “/images/logo.gif”,
-    “/images/copyright.gif”
+ 'resultCode':200,
+ 'pid': 13459,
+ 'details': 'success (2 items)',
+ 'paths':[
+    '/images/logo.gif',
+    '/images/copyright.gif'
  ],
- “notice”: “Maintenance scheduled at ...”
+ 'notice': 'Maintenance scheduled at ...'
 }
 ```
 
@@ -204,7 +204,8 @@ cdn.setValues({
     "resultCode": 200
 }
 ```
-##### In my tests though, status() will almost invariably return a 400 if called right after a purge. That is becuase the PID takes about 10-15 seconds to be ready for queries. Optionally one can set `openStatusPage:true` to have the status page open in a browser. One can then refresh the page to check the status.  
+
+_That being said, in my tests `status()` will almost invariably return a 400 if called right after a purge. That is because the PID takes about 10-15 seconds to be ready for queries. Optionally one can set `openStatusPage:true` to have the status page open in a browser. One can then refresh the page to check the status._  
 
 ---
 
@@ -227,6 +228,8 @@ The default is US/Global.
 I haven't noticed any difference using one or the other, but there you have them.
 
 Again, you can override the default service area either on instantiation or later on with, for instance, `setValues({servicearea:'JP'})`
+
+---
 
 ## Example usage
 
@@ -265,8 +268,7 @@ cdn.doPurge({
 })
 ```
 
-
-
+---
 
 ## Additional notes
 
