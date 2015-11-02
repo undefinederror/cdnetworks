@@ -10,11 +10,11 @@ A simple Node.js wrapper for the <a href="http://www.cdnetworks.com/" target="_b
 - [Create an instance](#create-an-instance)
 - [Defaults](#defaults)
 - [Return types](#return-types)
-- API
+- [API](#api)
   - [padList](#padlist)
   - [doPurge](#dopurge)
   - [status](#status)
-- [Example](#example)
+- [Example](#example-usage)
 - [Service area](#service-area)
 - [Additional notes](#additional-notes)
 
@@ -29,7 +29,7 @@ A simple Node.js wrapper for the <a href="http://www.cdnetworks.com/" target="_b
 ## Create an instance
 
 ```var cdn=require('cdnetworks')();```
-will create an instance with [default values](#defaults). 
+will create an instance with [default values](#defaults) 
 
 Either override the defaults on instantiation
 
@@ -38,7 +38,9 @@ Either override the defaults on instantiation
 or later on, at any time with ```cdn.setValues(conf)```, which returns the cdn instance.
 So a method can be chained
 
-```cdn.setValues(conf).padList()```
+```js
+cdn.setValues(conf).padList()
+```
 
 ---
 
@@ -226,7 +228,7 @@ I haven't noticed any difference using one or the other, but there you have them
 
 Again, you can override the default service area either on instantiation or later on with, for instance, `setValues({servicearea:'JP'})`
 
-## Example
+## Example usage
 
 ```js
 var cdn=require('cdn')({
