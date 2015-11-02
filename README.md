@@ -64,7 +64,7 @@ cdn.setValues(conf).padList()
 
 ```setValues``` returns the cdn instance.
 
-The actual API methods return a promise.
+The actual [API](#api) methods return a promise.
 
 You would normally follow the method call with a ```then/catch```
 
@@ -193,7 +193,7 @@ cdn.setValues({
         'my@super.visor'
     ],
     openStatusPage:true
-}).status(123456)
+}).status(12345)
 ```
 ##### response
 
@@ -231,34 +231,37 @@ Again, you can override the default service area either on instantiation or late
 ## Example usage
 
 ```js
-var cdn=require('cdn')({
+var cdn=require('cdnetworks')({
     user:'my@email.com',
     pass:'secret',
     emailTo:['my@email.com']
 });
 
-var pidArr=[];
+var pidArr = [];
 
 cdn.doPurge({
-    type:'all',
-    pad:'purge.allstuff.net'
+    type: 'wildcard',
+    pad: 'that.domain.com',
+    path: ['/some/path/*']
 })
-.then(function(res){
+.then(function (res) {
     pidArr.push(res.pid);
+    console.log(res);
     return cdn.doPurge({
-        pad:'that.domain.com',
-        path:['/stuff/to/purge.js']
+        pad: 'that.otherdomain.com',
+        path: ['/stuff/to/purge.js']
     })
 })
-.then(function(){
+.then(function (res) {
     pidArr.push(res.pid);
-    cdn.setValues({openStatusPage:true});
-    pidArr.forEach(function(idx,pid){
+    console.log(res);
+    cdn.setValues({ openStatusPage: true });
+    pidArr.forEach(function (idx, pid) {
         cdn.status(pid);
     });
 })
-.catch(function(err){
-    console.log('danger!\n' + err)
+.catch(function (err) {
+    console.log(err)
 })
 ```
 
