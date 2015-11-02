@@ -199,9 +199,9 @@ cdn.setValues({
 
 ```js
 {
- “resultCode”:200,
- “details”: “success”,
- “percentComplete”: 100.0
+    "details": "Requested information returned",
+    "percentComplete": 100,
+    "resultCode": 200
 }
 ```
 ##### In my tests though, status() will almost invariably return a 400 if called right after a purge. That is becuase the PID takes about 10-15 seconds to be ready for queries. Optionally one can set `openStatusPage:true` to have the status page open in a browser. One can then refresh the page to check the status.  
