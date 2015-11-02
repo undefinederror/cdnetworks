@@ -16,7 +16,7 @@ A simple Node.js wrapper for the <a href="http://www.cdnetworks.com/" target="_b
   - [status](#status)
 - [Example](#example)
 - [Service area](#service-area)
-- [Additional notes]{#additional-notes}
+- [Additional notes](#additional-notes)
 
 ---
 
@@ -204,8 +204,7 @@ cdn.setValues({
 ```
 ##### In my tests though, status() will almost invariably return a 400 if called right after a purge. That is becuase the PID takes about 10-15 seconds to be ready for queries. Optionally one can set `openStatusPage:true` to have the status page open in a browser. One can then refresh the page to check the status.  
 
-
-## Example
+---
 
 ## Service area
 
@@ -253,7 +252,7 @@ cdn.doPurge({
     pidArr.push(res.pid);
     cdn.setValues({openStatusPage:true});
     pidArr.forEach(function(idx,pid){
-        cdn.status({pid:pid});
+        cdn.status(pid);
     });
 })
 .catch(function(err){
@@ -267,7 +266,7 @@ cdn.doPurge({
 ## Additional notes
 
 Although the CDNetworks API offers both XML and JSON as output types, only JSON is supported here.
-I can't see why anyone would want to have to deal with an XML rather than a JSON when working with JavaScript, I certainly wouldn't, so I won't. 
+I can't see why anyone would want to have to deal with XML rather than JSON when working with JavaScript. I would certainly avoid it when possible, so I did. 
 
 
 #### Please see the CDNetworks API documentation for a full list of options and parameters for each API call
