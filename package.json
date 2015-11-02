@@ -1,15 +1,33 @@
 {
-  "name": "CDNetworks",
-  "version": "0.0.0",
-  "description": "CDNetworks",
-  "main": "app.js",
-  "author": {
-    "name": "el paf"
-  },
-  "dependencies": {
-    "lodash": "^3.10.1",
-    "open": "0.0.5",
-    "q": "^1.4.1",
-    "request": "^2.65.0"
-  }
+    "name": "cdnetworks",
+    "version": "1.0.0",
+    "description": "A simple Node.js wrapper for the CDNetworks Cache Flush Open API v2.4.0",
+    "homepage": "https://github.com/undefinederror/cdnetworks",
+    "bugs": {
+        "url": "http://github.com/undefinederror/cdnetworks/issues"
+    },
+    "license": {
+        "type": "MIT",
+        "url": "https://github.com/undefinederror/cdnetworks/blob/master/LICENSE"
+    },
+    "keywords": [
+        "cdnetworks",
+        "purge",
+        "flush",
+        "cache"
+    ],
+    "main": "app.js",
+    "author": {
+        "name": "el paf"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/undefinederror/cdnetworks.git"
+    },
+    "dependencies": {
+        "lodash": "^3.10.1",
+        "open": "0.0.5",
+        "q": "^1.4.1",
+        "request": "^2.65.0"
+    }
 }
